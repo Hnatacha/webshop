@@ -7,7 +7,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Webshop</title>
+    <title>Webshop::Nos produits</title>
     <!-- ***** style Area Start ***** -->
     <?php include './composants/styles.php'; ?>
     <!-- ***** style Area End ***** -->
@@ -21,12 +21,8 @@
         <?php include './composants/header.php'; ?>
         <!-- ***** header Area End ***** -->
 
-        <!-- ***** carrouselle Area Start ***** -->
-        <?php include './composants/carrouselle.php'; ?>
-        <!-- ***** carrouselle Area End ***** -->
-
         <!-- ***** produits Accueil Area Start ***** -->
-        <?php include './composants/produitsAccueil.php'; ?>
+        <?php include './composants/produits.php'; ?>
         <!-- ***** produits Accueil Area End ***** -->
 
         <!-- ***** Footer Area Start ***** -->

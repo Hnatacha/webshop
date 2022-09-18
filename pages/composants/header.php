@@ -1,10 +1,10 @@
-  <!-- ***** Header Area Start ***** -->
-  <?php include './composants/banner.php'; ?>   
-<div class="search-box">
-     <input type="text"  class="search-txt" placeholder="entrer votre recherche " />
-    <a class="search-btn" href="#">
-      <i class="fa fa-search" aria-hidden="true"></i>
-     </a>
-</div>
-                        
-<!-- ***** Header Area End ***** -->
+  <!-- Header Area Start -->
+  <header class="header-area header-wrapper">
+    <!-- ***** mesinfos Area Start ***** -->
+  <?php include './composants/mesinfos.php'; ?>
+  <!-- ***** mesinfos Area End ***** -->
+      <!-- ***** menu Area Start ***** -->
+  <?php include './composants/menu.php'; ?>
+  <!-- ***** menu Area End ***** -->
+  </header>
+  <!-- Header Area End -->
