@@ -1,0 +1,448 @@
+<?php>
+session_start();
+session_unset();
+session_destroy();
+header('location:inscription.html');
+exit();
+?>
+
+
+<!DOCTYPE html>
+<html style="font-size: 16px;"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content=""><meta name="description" content=""><meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title></title>
+    <link rel="stylesheet" href="/nicepage.css" media="screen">
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="np://app.desktop.nicepage.com/nicepage.js" defer=""></script>
+<meta name="generator" content="Nicepage 4.7.1, nicepage.com"></head>
+<body class="u-body u-palette-1-base u-xl-mode" data-style="blank" data-posts="" data-global-section-properties="{&quot;colorings&quot;:{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}}" data-source="blank" data-page-sections-style="[]" data-page-coloring-types="{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}" data-page-category="&quot;Basic&quot;" data-back-link="https://nicepage.com/website-mockup" data-back-link-title="Website Mockup" data-wp-back-link="https://nicepage.com/wordpress-themes" data-wp-back-link-title="WordPress Themes" data-jm-back-link="https://nicepage.com/joomla-templates" data-jm-back-link-title="Joomla Template" data-created-with-title="Website Design Software" data-wp-created-with-link="https://nicepage.com/wordpress-website-builder" data-wp-created-with-title="WordPress Website Builder" data-jm-created-with-link="https://nicepage.com/joomla-page-builder" data-jm-created-with-title="Joomla Editor"><section class="u-align-center u-clearfix u-image u-block-45e1-1" custom-posts-hash="T" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="45e1" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':504,'id':1,'headingProp':'h2','textProp':'text'}]" data-style="Form-Basic-heading" id="sec-1e0a" data-source="Sketch" data-image-width="1280" data-image-height="853">
+  <div class="u-clearfix u-sheet u-block-45e1-2">
+    
+    
+  <h2 class="u-text u-block-45e1-15">Inscription</h2><h1 class="u-text u-title u-block-45e1-34">INSCRIVEZ VOUS POUR ETRE MEMBRE</h1><div class="u-form u-block-45e1-16">
+      <form action="connexion.php" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
+        
+        
+        <div class="u-form-group u-form-name u-label-none u-block-45e1-17">
+          <label for="name-3b9a" class="u-label u-block-45e1-18">Prenom</label>
+          <input type="text" placeholder="entre ton prenom" id="name-3b9a" name="Prenom" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-19" required="">
+        </div>
+        <div class="u-form-group u-form-name u-label-none u-block-45e1-28">
+    <label for="name-39e3" class="u-label u-block-45e1-29">Nom</label>
+    <input type="text" placeholder="Entre ton nom" id="name-39e3" name="Nom" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-30" required="">
+</div><div class="u-form-group u-label-none u-block-45e1-41">
+    <label for="text-fbb4" class="u-label u-block-45e1-42">Pseudo</label>
+    <input type="text" placeholder="Veuillez entre vos  nom d'utilisateur" id="text-fbb4" name="Pseudo" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-43" required="required">
+</div><div class="u-form-group u-form-phone u-label-none u-block-45e1-31">
+    <label for="phone-75a4" class="u-label u-block-45e1-32">Phone</label>
+    <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Entrer votre numéro de téléphone" id="phone-75a4" name="numero_tel" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-33" required="">
+</div><div class="u-form-email u-form-group u-label-none u-block-45e1-20">
+          <label for="email-3b9a" class="u-label u-block-45e1-21">Email</label>
+          <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-22" required="">
+        </div><div class="u-form-date u-form-group u-label-none u-block-45e1-38">
+    <label for="date-29df" class="u-label u-block-45e1-39">Date de naissance:</label>
+    <input type="date" placeholder="MM/DD/YYYY" id="date-29df" name="date_naissance" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-40" required="">
+</div><div class="u-form-group u-label-none u-block-45e1-47">
+    <label for="text-fb21" class="u-label u-block-45e1-48">Nationalité</label>
+    <input type="text" placeholder="Entre votre nationalité" id="text-fb21" name="nationalite" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-49" required="required">
+</div><div class="u-form-address u-form-group u-label-none u-block-45e1-44">
+    <label for="address-f0cf" class="u-label u-block-45e1-45">Address</label>
+    <input type="text" placeholder="Entre votre adresse" id="address-f0cf" name="address" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-46" required="">
+</div><div class="u-form-group u-label-none u-block-45e1-35">
+    <label for="text-3969" class="u-label u-block-45e1-36">Mots de passe</label>
+    <input type="text" placeholder="Entre votre mots de passe" id="text-3969" name="mots_passe" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-37" required="required">
+</div><div class="u-form-group u-label-none u-block-45e1-62">
+    <label for="text-aaa2" class="u-label u-block-45e1-63">check mdp</label>
+    <input type="text" placeholder="Confirmer votre mots de passe" id="text-aaa2" name="check_mdp" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-64" required="required">
+</div><div class="u-form-group u-label-none u-block-45e1-50">
+    <label for="text-c61b" class="u-label u-block-45e1-51">Ville</label>
+    <input type="text" placeholder="Entre votre ville" id="text-c61b" name="ville" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-52" required="required">
+</div><div class="u-form-group u-label-none u-block-45e1-56">
+    <label for="text-2145" class="u-label u-block-45e1-57">Code de Postal</label>
+    <input type="text" placeholder="Entre votre code de postal" id="text-2145" name="code_postal" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-58" required="required">
+</div>
+        
+        <div class="u-form-group u-form-select u-label-none u-block-45e1-65">
+    <label for="select-e0a6" class="u-label u-block-45e1-66">sexe</label>
+    <div class="u-form-select-wrapper">
+        <select id="select-e0a6" name="sexe" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white u-block-45e1-67" required="required"><option value="male">male</option><option value="femelle">femelle</option></select>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+    </div>
+</div><div class="u-align-left u-form-group u-form-submit u-block-45e1-26">
+          <a href="#" class="u-black u-btn u-btn-submit u-button-style u-block-45e1-27">S'inscrire<br></a>
+          <input type="submit" value="submit" class="u-form-control-hidden">
+        </div>
+        <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+        <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+        <input type="hidden" value="" name="recaptchaResponse">
+      </form>
+    </div></div>
+  <style data-mode="XL">@media (min-width: 1200px) {
+  .u-block-45e1-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_82892435/images/56f9d724b7ad9ee05e0de901e9d6ca0d48be3d3d7167174dd555fcae2206c9520ca19677176ff03a3c458f4e8c6ff7c8ff6645f3c4a80a11e44ce8_1280.jpg?rand=8d1f");
+    background-position: 50% 50%;
+  }
+  .u-block-45e1-2 {
+    min-height: 1356px;
+  }
+  .u-block-45e1-15 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    width: 456px;
+    margin-top: 183px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-45e1-34 {
+    font-size: 1.875rem;
+    margin-top: 60px;
+    margin-right: 254px;
+    margin-bottom: 0;
+    margin-left: 272px;
+  }
+  .u-block-45e1-16 {
+    height: 877px;
+    width: 563px;
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+  .u-block-45e1-28 {
+    margin-left: 0;
+  }
+  .u-block-45e1-41 {
+    margin-left: 0;
+  }
+  .u-block-45e1-31 {
+    margin-left: 0;
+  }
+  .u-block-45e1-38 {
+    margin-left: 0;
+  }
+  .u-block-45e1-47 {
+    margin-left: 0;
+  }
+  .u-block-45e1-44 {
+    margin-left: 0;
+  }
+  .u-block-45e1-35 {
+    margin-left: 0;
+  }
+  .u-block-45e1-62 {
+    margin-left: 0;
+  }
+  .u-block-45e1-50 {
+    margin-left: 0;
+  }
+  .u-block-45e1-56 {
+    margin-left: 0;
+  }
+  .u-block-45e1-65 {
+    margin-left: 0;
+  }
+  .u-block-45e1-27 {
+    border-style: none;
+  }
+}</style>
+  <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+  .u-block-45e1-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_82892435/images/56f9d724b7ad9ee05e0de901e9d6ca0d48be3d3d7167174dd555fcae2206c9520ca19677176ff03a3c458f4e8c6ff7c8ff6645f3c4a80a11e44ce8_1280.jpg?rand=8d1f");
+    background-position: 50% 50%;
+  }
+  .u-block-45e1-2 {
+    min-height: 1118px;
+  }
+  .u-block-45e1-15 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    width: 456px;
+    margin-top: 183px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-45e1-34 {
+    font-size: 1.875rem;
+    margin-top: 60px;
+    margin-right: 154px;
+    margin-bottom: 0;
+    margin-left: 172px;
+  }
+  .u-block-45e1-16 {
+    height: 877px;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+    width: 563px;
+  }
+  .u-block-45e1-28 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-41 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-31 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-38 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-47 {
+    margin-left: 0;
+  }
+  .u-block-45e1-44 {
+    margin-left: 0;
+  }
+  .u-block-45e1-35 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-62 {
+    margin-left: 0;
+  }
+  .u-block-45e1-50 {
+    margin-left: 0;
+  }
+  .u-block-45e1-56 {
+    margin-left: 0;
+  }
+  .u-block-45e1-65 {
+    margin-left: 0;
+  }
+  .u-block-45e1-27 {
+    border-style: none;
+  }
+}</style>
+  <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+  .u-block-45e1-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_82892435/images/56f9d724b7ad9ee05e0de901e9d6ca0d48be3d3d7167174dd555fcae2206c9520ca19677176ff03a3c458f4e8c6ff7c8ff6645f3c4a80a11e44ce8_1280.jpg?rand=8d1f");
+    background-position: 50% 50%;
+  }
+  .u-block-45e1-2 {
+    min-height: 856px;
+  }
+  .u-block-45e1-15 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    width: 456px;
+    margin-top: 183px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-45e1-34 {
+    font-size: 1.875rem;
+    margin-top: 60px;
+    margin-right: 44px;
+    margin-bottom: 0;
+    margin-left: 62px;
+  }
+  .u-block-45e1-16 {
+    height: 877px;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+    width: 563px;
+  }
+  .u-block-45e1-28 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-41 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-31 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-38 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-47 {
+    margin-left: 0;
+  }
+  .u-block-45e1-44 {
+    margin-left: 0;
+  }
+  .u-block-45e1-35 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-62 {
+    margin-left: 0;
+  }
+  .u-block-45e1-50 {
+    margin-left: 0;
+  }
+  .u-block-45e1-56 {
+    margin-left: 0;
+  }
+  .u-block-45e1-65 {
+    margin-left: 0;
+  }
+  .u-block-45e1-27 {
+    border-style: none;
+  }
+}</style>
+  <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+  .u-block-45e1-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_82892435/images/56f9d724b7ad9ee05e0de901e9d6ca0d48be3d3d7167174dd555fcae2206c9520ca19677176ff03a3c458f4e8c6ff7c8ff6645f3c4a80a11e44ce8_1280.jpg?rand=8d1f");
+    background-position: 50% 50%;
+  }
+  .u-block-45e1-2 {
+    min-height: 642px;
+  }
+  .u-block-45e1-15 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    width: 456px;
+    margin-top: 183px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-45e1-34 {
+    font-size: 1.875rem;
+    margin-top: 60px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-45e1-16 {
+    height: 877px;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+    width: 540px;
+  }
+  .u-block-45e1-28 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-41 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-31 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-38 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-47 {
+    margin-left: 0;
+  }
+  .u-block-45e1-44 {
+    margin-left: 0;
+  }
+  .u-block-45e1-35 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-62 {
+    margin-left: 0;
+  }
+  .u-block-45e1-50 {
+    margin-left: 0;
+  }
+  .u-block-45e1-56 {
+    margin-left: 0;
+  }
+  .u-block-45e1-65 {
+    margin-left: 0;
+  }
+  .u-block-45e1-27 {
+    border-style: none;
+  }
+}</style>
+  <style data-mode="XS">@media (max-width: 575px) {
+  .u-block-45e1-1 {
+    background-image: url("np://user.desktop.nicepage.com/Site_82892435/images/56f9d724b7ad9ee05e0de901e9d6ca0d48be3d3d7167174dd555fcae2206c9520ca19677176ff03a3c458f4e8c6ff7c8ff6645f3c4a80a11e44ce8_1280.jpg?rand=8d1f");
+    background-position: 50% 50%;
+  }
+  .u-block-45e1-2 {
+    min-height: 404px;
+  }
+  .u-block-45e1-15 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 340px;
+    margin-top: 183px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .u-block-45e1-34 {
+    font-size: 1.875rem;
+    margin-top: 60px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  .u-block-45e1-16 {
+    height: 877px;
+    margin-top: 38px;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-left: auto;
+    width: 340px;
+  }
+  .u-block-45e1-28 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-41 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-31 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-38 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-47 {
+    margin-left: 0;
+  }
+  .u-block-45e1-44 {
+    margin-left: 0;
+  }
+  .u-block-45e1-35 {
+    margin-left: 0;
+    margin-right: undefined;
+  }
+  .u-block-45e1-62 {
+    margin-left: 0;
+  }
+  .u-block-45e1-50 {
+    margin-left: 0;
+  }
+  .u-block-45e1-56 {
+    margin-left: 0;
+  }
+  .u-block-45e1-65 {
+    margin-left: 0;
+  }
+  .u-block-45e1-27 {
+    border-style: none;
+  }
+}</style>
+</section>
+</body></html>
