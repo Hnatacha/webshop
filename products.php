@@ -190,7 +190,14 @@ https://templatemo.com/tm-571-webshop
                             </div>
                             <div class="down-content">
                                 <h4>New Green Jacket</h4>
-                                <span>75.00<sup>€</sup></span>
+                                <div class="row prix_et_reservation">
+                                    <span class="prix">
+                                        75.00 <sup>€</sup>
+                                    </span>
+                                    <span class="reservation" positionCourrante="3">
+                                        <span>reserver</span>
+                                    </span>
+                                </div>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -215,7 +222,14 @@ https://templatemo.com/tm-571-webshop
                             </div>
                             <div class="down-content">
                                 <h4>Classic Dress</h4>
-                                <span>45.00<sup>€</sup></span>
+                                <div class="row prix_et_reservation">
+                                    <span class="prix">
+                                        45.00 <sup>€</sup>
+                                    </span>
+                                    <span class="reservation" positionCourrante="3">
+                                        <span>reserver</span>
+                                    </span>
+                                </div>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -239,8 +253,15 @@ https://templatemo.com/tm-571-webshop
                                 <img src="assets/images/women-03.jpg" alt="">
                             </div>
                             <div class="down-content">
-                                <h4>Spring Collection</h4>
-                                <span>130.00<sup>€</sup></span>
+                                <h4>Swag</h4>
+                                <div class="row prix_et_reservation">
+                                    <span class="prix">
+                                        130.00 <sup>€</sup>
+                                    </span>
+                                    <span class="reservation" positionCourrante="3">
+                                        <span>reserver</span>
+                                    </span>
+                                </div>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
@@ -311,7 +332,7 @@ https://templatemo.com/tm-571-webshop
                                         <li><a href="single-product.php"><i class="fa fa-shopping-cart"></i></a></li>
                                     </ul>
                                 </div>
-                                <img src="assets/images/kid-03.jpg" alt="">
+                                <img src="assets/images/PSgreen.jpg" alt="">
                             </div>
                             <div class="down-content">
                                 <h4>Classic dress</h4>

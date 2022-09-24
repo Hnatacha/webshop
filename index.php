@@ -141,21 +141,21 @@ https://templatemo.com/tm-571-webshop
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="assets/images/left-banner-image.jpg" class="d-block w-100" alt="...">
+                                            <img src="assets/images/women-01.jpg" class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>First slide label</h5>
                                                 <p class="slide_description">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="assets/images/left-banner-image.jpg" class="d-block w-100" alt="...">
+                                            <img src="assets/images/women-02.jpg" class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>Second slide label</h5>
                                                 <p class="slide_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="assets/images/left-banner-image.jpg" class="d-block w-100" alt="...">
+                                            <img src="assets/images/women-03.jpg" class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>Third slide label</h5>
                                                 <p class="slide_description">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -193,7 +193,7 @@ https://templatemo.com/tm-571-webshop
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="assets/images/robe-pull.jpg">
+                                            <img src="assets/images/sweat-hood.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@ https://templatemo.com/tm-571-webshop
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="assets/images/robe-pull.jpg">
+                                            <img src="assets/images/casquette.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@ https://templatemo.com/tm-571-webshop
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="assets/images/robe-pull.jpg">
+                                            <img src="assets/images/RedPant.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -253,7 +253,7 @@ https://templatemo.com/tm-571-webshop
                                                     </div>
                                                 </div>
                                             </div>
-                                            <img src="assets/images/robe-pull.jpg">
+                                            <img src="assets/images/sweat-t-shirt.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -417,17 +417,18 @@ https://templatemo.com/tm-571-webshop
                             <div class="row">
                                 <div class="col-lg-5">
                                     <fieldset>
-                                        <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                                        <input name="name" type="text" id="name" placeholder="Ton nom" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-5">
                                     <fieldset>
-                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Ton Address mail" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-2">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                                        <button a href="connexion.php" type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"> 
+                                            </a></i></button>
                                     </fieldset>
                                 </div>
                             </div>
