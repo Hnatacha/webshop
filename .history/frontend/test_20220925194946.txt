@@ -1,0 +1,20 @@
+<div class='col-lg-6'>
+                                    <div class='right-first-image'>
+                                        <div class='thumb'>
+                                            <div class='inner-content'>
+                                                <h4>printemps</h4>
+                                                <span>Meilleur vetements pour femme</span>
+                                            </div>
+                                            <div class='hover-content'>
+                                                <div class='inner'>
+                                                    <h4>Women</h4>
+                                                    <p>La purete de l'ame ne peut etre vue que par Dieu</p>
+                                                    <div class='main-border-button'>
+                                                        <a href='printemps.php'>entrer</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src='../assets/images/sweat-hood.jpg'>
+                                        </div>
+                                    </div>
+                                </div>

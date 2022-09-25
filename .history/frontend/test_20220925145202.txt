@@ -1,0 +1,32 @@
+<div class="col-lg-4 box">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                                <ul>
+                                    <li><a href="single-product.php"><i class="fa fa-eye"></i></a></li>
+                                    <li><a href="single-product.php"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="single-product.php"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="../assets/images/men-01.jpg" alt="">
+                        </div>
+                        <div class="down-content">
+                            <h4>Classic Spring</h4>
+                            <div class="row">
+                                <span class="prix">
+                                    120.00 <sup>€</sup>
+                                </span>
+                                <span class="reservation" id="reservation" positionCourrante="1" quantite="1">
+                                    <span>reserver</span>
+                                </span>
+                            </div>
+                            <ul class="stars">
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
