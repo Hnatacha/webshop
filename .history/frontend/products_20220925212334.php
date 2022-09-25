@@ -1,5 +1,5 @@
 <?php
-
+$loggedin = isset($_SESSION['loggedin']);
 $data = array('one', 'two', 'three');
 $connexion = mysqli_connect("localhost", "root", "", "webshops");
 
@@ -217,7 +217,7 @@ https://templatemo.com/tm-571-webshop
         function isConnected() {
             var loggedin = '<?php echo $loggedin; ?>';
             var datar = <?php echo json_encode($data); ?>;
-            console.log('azertyui:::', loggedin)
+            con
             return loggedin;
         }
 
@@ -242,7 +242,7 @@ https://templatemo.com/tm-571-webshop
                 if (!isConnected()) {
                     console.log("is not connected")
                     /* Si on n'est pas connecté alors redirection ver la page membre.php */
-                    //window.location.href = 'membre.php';
+                    window.location.href = 'membre.php';
                 } else {
                     console.log("is  connected")
                     /* On cache le boutton reservation apres sa selection */

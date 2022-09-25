@@ -1,7 +1,7 @@
 <?php
 // We need to use sessions, so you should always start sessions using the below code.
 session_start();
-$loggedin = isset($_SESSION['loggedin']);
+
 ?>
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">

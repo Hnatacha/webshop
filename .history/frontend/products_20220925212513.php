@@ -1,5 +1,5 @@
 <?php
-
+$loggedin = isset($_SESSION['loggedin']);
 $data = array('one', 'two', 'three');
 $connexion = mysqli_connect("localhost", "root", "", "webshops");
 
