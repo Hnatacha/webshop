@@ -4,6 +4,7 @@ $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'webshops';
+$datedeconfirmation = Date("y/m/d H:i:s");
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
@@ -42,18 +43,12 @@ if ($stmt = $con->prepare('SELECT id, mot_de_passe FROM compte WHERE email = ?')
     } else {
         // Insert new account
         // Username doesnt exists, insert new account
-        if ($stmt = $con->prepare('INSERT INTO compte (nom, prenom, mot_de_passe, email) VALUES (?, ?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO compte (nom, prenom, mot_de_passe, email,datedeconfirmation) VALUES (?, ?, ?, ?,?)')) {
             // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
             $password = password_hash($_POST['mot_de_passe'], PASSWORD_DEFAULT);
-            $stmt->bind_param('ssss', $_POST['nom'],  $_POST['prenom'], $password, $_POST['email']);
+            $stmt->bind_param('sssss', $_POST['nom'],  $_POST['prenom'], $password, $_POST['email'],$datedeconfirmation);
             $stmt->execute();
-            /* $from    = 'noreply@yourdomain.com';
-            $subject = 'Account Activation Required';
-            $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-            // Update the activation variable below
-            $message = '<p>You have successfully registered, you can now login!</p>';
-            mail($_POST['email'], $subject, $message, $headers);
-            echo 'Please check your email to activate your account!'; */
+            
             header('Location: ../frontend/membre.php');
         } else {
             // Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.

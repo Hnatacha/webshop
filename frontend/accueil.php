@@ -1,8 +1,11 @@
 <?php
-$connexion = mysqli_connect("localhost", "root", "", "webshops");
+use LDAP\Result;
+
+include '../configDB.php';
+include '../webshopUtils.php';
 //cette methode permet l'affichage des enregistrement d'une table en fct de l'id
 //cette methode permet l'affichage des enregistrement d'une table
-function affichage($table, $con)
+function affichage2($table, $con)
 {
     $sql = "SELECT * FROM $table ORDER BY id DESC";
     $query = mysqli_query($con, $sql);
@@ -12,7 +15,7 @@ function affichage($table, $con)
         return "Empty table";
     }
 }
-$saisons = affichage("saison", $connexion);
+$saisons = affichage2("saison", $con);
 $saisonsInformations = array(
     ["slogan" => "Meilleur Vetement pour femme", "slogan2" => "La purete de l'ame ne peut etre vu que par Dieu", "url" => "../assets/images/sweat-hood.jpg"],
     ["slogan" => "Meilleur Vetement pour femme", "slogan2" => "La purete de l'ame ne peut etre vu que par Dieu", "url" => "../assets/images/casquette.jpg"],
@@ -297,6 +300,7 @@ https://templatemo.com/tm-571-webshop
 
     <!-- Global Init -->
     <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/webshop.js"></script>
 
     <script>
         $(function() {

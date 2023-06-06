@@ -2677,3 +2677,7 @@ p.slide_description{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+button#form-submit {
+  border-radius: 19%;
+}

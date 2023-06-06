@@ -4,6 +4,7 @@ $loggedin = isset($_SESSION['loggedin']);
 $connexion = mysqli_connect("localhost", "root", "", "webshops");
 
 
+
 //cette methode permet l'affichage des enregistrement d'une table en fct de l'id
 function affichageParIdentifiant($table, $con, $id)
 {
@@ -38,6 +39,7 @@ function paginationParSaison($table, $firstPage, $messageParPage, $con, $saison)
         return "Empty table";
     }
 }
+
 $saisonSelectionne = affichageParIdentifiant("saison",$connexion, "id='".$_GET['idsaison']."'"); // exemple de retour $res[[1,"automne"]]; 
 
 $produits = affichageParSaison("produit", $connexion, "saison_id='".$_GET['idsaison']."'");
@@ -65,6 +67,8 @@ $elements = paginationParSaison("produit", $premiereEntree, $produitParPage, $co
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 
     <title>webshop - Product Listing Page</title>
 
@@ -120,53 +124,11 @@ https://templatemo.com/tm-571-webshop
                 </div>
             </div>
         </div>
+       
+        
         <div class="container">
             <div class="row">
-                <?php
-                if ($produits > 0) {
-                    foreach ($elements as $x => $element) {
-                        extract($element);
-                        echo "<div class='col-lg-4 box'>
-                                <div class='item'>
-                                <div class='thumb'>
-                                    <div class='hover-content'>
-                                        <ul>
-                                            <li><a href='single-product.php'><i class='fa fa-eye'></i></a></li>
-                                            <li><a href='single-product.php'><i class='fa fa-star'></i></a></li>
-                                            <li><a href='single-product.php'><i class='fa fa-shopping-cart'></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <img src='";
-                        echo $elements[$x]['url'];
-                        echo "' alt=''>
-                                </div>
-                                <div class='down-content'>
-                                    <h4>";
-                        echo $elements[$x]['libelle'] .$x;
-                        echo "</h4>
-                                        <div class='row'>
-                                            <span class='prix'>
-                                            ";
-                        echo $elements[$x]['prix'];
-                        echo " <sup>€</sup>
-                                            </span>
-                                            <span class='reservation' id='reservation' positionCourrante=$x quantite='1'>
-                                                <span>reserver</span>
-                                            </span>
-                                        </div>
-                                        <ul class='stars'>";
-                        for ($i = 0; $i <= $elements[$x]['rate']; $i++) {
-                            echo "<li><i class='fa fa-star'></i></li>";
-                        }
-                        echo "  
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>";
-                    }
-                }
-
-                ?>
+              <?php include 'listProducts.php' ?>
 
                 <div class="col-lg-12">
                     <div class="pagination">
@@ -192,6 +154,7 @@ https://templatemo.com/tm-571-webshop
                 </div>
             </div>
         </div>
+         -->
     </section>
     <!-- ***** Products Area Ends ***** -->
 
@@ -220,183 +183,7 @@ https://templatemo.com/tm-571-webshop
 
     <!-- Global Init -->
     <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/webshop.js"></script>
 
-    <script>
-        let mesReservations = {}
-        let monPanier = {}
-
-        /**
-         * Verification si l'utilisateur est connecté
-         */
-        function isConnected() {
-            var loggedin = '<?php echo $loggedin; ?>';
-            var datar = <?php echo json_encode($data); ?>;
-            return loggedin;
-        }
-
-        $(function() {
-            /**
-             * Reservation des produits par un client
-             **/
-            $("body").on("click", ".reservation[positionCourrante]", function(event) {
-                event.preventDefault();
-                let currentposition = $(this).attr("positionCourrante");
-                let quantite = $(this).attr("quantite")
-                let id_product = $(this).attr("product");
-                let designation = $(this).attr("designation");
-                let prix = $(this).attr("prix");
-                $("#designation").text(designation);
-                let image = $(this).attr("src");
-                let htmlDiv = "";
-                htmlDiv += "<img alt='image_" + designation + "' src='" + image + "'   class='imagehref" + currentposition + "' width='70px' height='70px'/>";
-                console.log("Valeur", currentposition);
-
-
-                if (!isConnected()) {
-                    console.log("is not connected")
-                    /* Si on n'est pas connecté alors redirection ver la page membre.php */
-                    window.location.href = 'membre.php';
-                } else {
-                    console.log("is  connected")
-                    /* On cache le boutton reservation apres sa selection */
-                    $(".reservation[positionCourrante='" + currentposition + "']").hide();
-                }
-
-
-
-                /*  if (Object.keys(monPanier).length > 0) {
-                     var trouver = false;
-                     $.each(monPanier, function(key, val) {
-                         if (monPanier[key]['groupe'] === groupe && monPanier[key]['product_id'] === id_product) {
-                             trouver = true;
-                             monPanier[key]["qte"] = (parseInt(monPanier[key]["qte"]) + parseInt(qte));
-                         }
-                     });
-                     if (trouver == false) {
-                         counter = (Object.keys(monPanier).length) + 1;
-                         addElementInBasket(counter, id_product, designation, price, htmlDiv, groupe, currentposition, qte);
-                     }
-                 } else {
-                     counter = (Object.keys(monPanier).length) + 1;
-                     addElementInBasket(counter, id_product, designation, price, htmlDiv, groupe, currentposition, qte);
-                 }
-                 //Svgd le panier en memoire
-                 storeInfos(monPanier);
-                 getInfos(monPanier);
-                 //Recharger le panier
-                 refreshMyBasketItems();
-                 refreshQte(currentposition, groupe, id_product);
-                 hideEmptyCart(monPanier); */
-
-
-
-            });
-
-            function addElementInBasket(counter, id_product, designation, price, imageHtml, groupe, currentposition, qte) {
-                monPanier[counter] = {
-                    id: counter,
-                    product_id: id_product,
-                    designation: designation,
-                    price: price,
-                    image: imageHtml,
-                    groupe: groupe,
-                    currentposition: currentposition,
-                    qte: qte
-                };
-            }
-
-
-
-
-            /**
-             * Cacher le panier s'il ne contient pas d'elements
-             * @param myBasket
-             */
-            function hideEmptyCart(myBasket) {
-                if (myBasket) {
-                    let total = Object.keys(myBasket).length;
-                    if (total == 0) {
-                        $('.total-cart').hide();
-                    } else {
-                        $('.total-cart').show();
-                    }
-                } else {
-                    $('.total-cart').hide();
-                }
-            }
-
-
-            function refreshQte(currentposition, groupe, id_product) {
-                if (Object.keys(monPanier).length > 0) {
-                    var trouver = false;
-                    $.each(monPanier, function(key, val) {
-                        if (monPanier[key]['currentposition'] === currentposition && monPanier[key]['groupe'] === groupe && monPanier[key]['product_id'] === id_product) {
-                            trouver = true;
-                            $('.quick-qte').val(monPanier[key]["qte"]);
-                        }
-                    });
-                    if (trouver == false) {
-                        $('.quick-qte').val(1);
-                    }
-                } else {
-                    $('.quick-qte').val(1);
-                }
-            }
-
-            /**
-             * actuaisation de la page et sauvgarde des elements
-             * selectionner dans le panier
-             */
-            function refreshMyBasketItems() {
-                if (typeof localStorage != 'undefined') {
-                    //Transform to object
-                    let items = JSON.parse(localStorage.getItem("monPanier"));
-                    if (items) {
-                        let monPanierTotal = 0;
-                        monPanier = items;
-                        $('.adding_orders').html(''); //clear all items
-                        $.each(items, function(key, val) {
-                            //Coloration
-                            $('.add_product_incart_purpose_' + items[key]['product_id'] + '_' + items[key]['groupe']).children().css({
-                                "color": "#ff0000",
-                                "border": "2px solid rgba(255, 0, 0, 0.3)"
-                            });
-                            panierInformation(key, items[key]['groupe'], items[key]['currentposition'], items[key]['designation'], items[key]['price'], items[key]['qte'], items[key]['image'], items[key]['product_id']);
-                            monPanierTotal += (parseFloat(val.price) * parseFloat(val.qte));
-                        });
-                        let total = Object.keys(items).length;
-                        $('.cart-quantity').html(total);
-                        $(".total_in_cart").html(monPanierTotal + "<sup>xaf</sup>");
-                    }
-                    loadBasketELement();
-                    hideEmptyCart(items);
-                }
-            }
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-
-            /* $(".reservation").on("click", function(event) {
-                event.preventDefault();
-                $(this).css('color', 'red');
-                console.log("jkcdjjkcdcjdc");
-            });
-            $(".reservation").click(function() {
-                console.log("ok");
-            });
-
-
-            $('.reservation').click(function() {
-                console.log("ok");
-                if ($('.img_display_content').is(":visible")) {
-                    $('.img_display_content').hide();
-                } else {
-                    $('.img_display_content').show();
-                }
-
-            }); */
-        });
-    </script>
-
+    
 </body>

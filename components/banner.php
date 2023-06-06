@@ -1,6 +1,4 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
 $loggedin = isset($_SESSION['loggedin']);
 ?>
 <!-- ***** Header Area Start ***** -->
@@ -17,48 +15,32 @@ $loggedin = isset($_SESSION['loggedin']);
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav" style="float: right;">
                         <?php if (isset($_SESSION['loggedin'])) {
-                            echo ' <li>
+                            ?>
+                            <li>
                                 <a href="../backend/deconnexion.php">
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </a>
-                            </li>';
+                            </li>
+                           
+                        <?php
                         } ?>
 
-
-                        <li class="scroll-to-section submenu"><a href="#">
+                            <li>
+                                <a href="../admin/authentification.php" title="Espace admin">
+                                    <i style='font-size:16px' class='fas'>&#xf023;</i>
+                                </a>
+                            </li>
+                        <li class="scroll-to-section submenu"><a href="../frontend/panier.php">
                                 <i class="fa-solid fa-basket-shopping"></i>
-                                <sup class="totalItems">5</sup>
-                                <ul class="basket">
-                                    <div class="row basket">
-                                        <div class="row item">
-                                            <div class="image">
-                                                <img src="../assets/images/kid-01.jpg" alt="" width="30%" height="30%">
-                                            </div>
-                                            <div class="description">
-                                                T-Shirt
-                                            </div>
-                                            <div class="price">Rs<sub>200</sub></div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row totalPrice">
-                                        <div class="titre">
-                                            <span style="font-weight: bold" class="titre"><i class="fa-solid fa-2x fa-sack-dollar"></i>&nbsp;Rs</span>
-                                        </div>
-                                        <div class="montant">
-                                            1000000
-                                        </div>
-                                        <div class="panier">
-                                            <button class="btn btn-primary panierBtn">Panier</button>
-                                        </div>
-                                    </div>
-                                </ul>
+                                <sup
+                                    class="totalItems"><?=array_sum(isset($_SESSION['panier']) ? $_SESSION['panier'] : array())?></sup>
                             </a></li>
                     </ul>
                     <div class="search_box">
-                        <input type="text" class="search-txt-header" placeholder="entrer votre recherche " />
-                        <a class="search-btn" href="#">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="search" id="search" on="search($event)" class="search-txt-header"
+                            placeholder="entrer votre recherche " />
+                        <a class="search-btn" id="search-btn" href="javascript:;" >
+                            <i class="fa fa-search" type="search" name="terme" aria-hidden="true"></i>
                         </a>
                     </div>
 
@@ -72,8 +54,8 @@ $loggedin = isset($_SESSION['loggedin']);
                                     <li><a href="accessoire.php">Accessoire</a></li>
                                 </ul>
                             </li>
-                            <li class="scroll-to-section"><a href="membre.php">Membre</a></li>
-                            <li class="scroll-to-section"><a href="business.php">Affaire</a></li>
+                            <li class="scroll-to-section"><a href="membre.php">Espace-Membre</a></li>
+                            <li class="scroll-to-section"><a href="business.php">Bonne-Affaire</a></li>
                             <li class="scroll-to-section"><a href="contact.php">Contact </a></li>
                         </ul>
                     </div>

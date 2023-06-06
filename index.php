@@ -15,6 +15,7 @@
         <?php
              $lienA='location:backend/admin.php' ; //Lien vers le module backend
              $lienB='location:frontend/accueil.php' ;//Lien vers le module fontend
+             $lienC='location:admin/index.php' ;//Lien vers le module fontend
              header($lienB);
         ?>
     </body>

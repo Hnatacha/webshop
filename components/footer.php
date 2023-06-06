@@ -9,28 +9,28 @@
                         </div>
                         <ul>
                             <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, mauritius</a></li>
-                            <li><a href="#">webshoplowh@gmail.com</a></li>
-                            <li><a href="#">230-58840705</a></li>
+                            <li><a href= "mailto:webshoplowh@gmail.com">webshoplowh@gmail.com</a></li>
+                            <li><a href="tel:+23058840705">230-58840705</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <h4>  Categories</h4>
                     <ul>
-                        <li><a href="#">hiver</a></li>
-                        <li><a href="#">ete</a></li>
-                        <li><a href="#">printemps</a></li>
-                        <li><a href="#">automne</a></li>
+                        <li><a href="../saisons.php?idsaison=1">hiver</a></li>
+                        <li><a href="../saisons.php?idsaison=4">ete</a></li>
+                        <li><a href="../saisons.php?idsaison=3">printemps</a></li>
+                        <li><a href="../saisons.php?idsaison=2">automne</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-3">
                     <h4>Help &amp; Information</h4>
                     <ul>
-                        <li><a href="crud/politique de la vie privée.html">politique de la vie privée</a></li>
-                        <li><a href="crud/Faq.html">FAQ's</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="../frontend/politique.php">politique de la vie privée</a></li>
+                        <li><a href="../crud/Faq.html">FAQ's</a></li>
+                        <li><a href="../frontend/contact.php">Contact Us</a></li>
+                        <li><a href="../frontend/about.php">About Us</a></li>
 
                     </ul>
                  
