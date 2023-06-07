@@ -123,7 +123,7 @@ https://templatemo.com/tm-571-webshop
                     <td class="text-left"><?= $_SESSION['panier'][$product['id']] // Quantité
                                           ?></td>
                     <td class="text-ce"><a href="../frontend/panier.php?del=<?= $product['id'] ?>"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a></td>
-                   
+                    <td class="text-ce"><a class="text-white" href='../backend/panier/ajouter.php?id=<?= $produit['id'] ?>'  class="reservation"> </a> reservation</td>
                   </tr>
               <?php endforeach;
                ?>
