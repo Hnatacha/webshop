@@ -1,4 +1,6 @@
 <?php
+
+
                 if ($produits > 0) {
                     foreach ($produits as $x => $produit) {
                 ?>
@@ -20,8 +22,10 @@
                 <span class='prix'> <?= $produit['prix'] ?><sup>€</sup>
                 </span>
                 <span class='reservation'>
-                         <span><a class="text-white" href='../backend/panier/ajouter.php?id=<?= $produit['id'] ?>' class="reservation">Reserver</a></span>
-                </span>
+                <span><a class="text-white" href='../backend/panier/ajouter.php?id=<?= $produit['id'] ?>' class="ajout panier">reservation</a></span>
+
+                 </span>
+                 
                 
                 <!-- span class='reservation' id='reservation' positionCourrante=$x quantite='1'>
                                                 <span>reserver</span>
@@ -46,4 +50,5 @@
                 }
 
                 ?>
+                
 

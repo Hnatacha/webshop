@@ -6,26 +6,29 @@
 // include("admin_counter_display.php");
 
 
-if (isset($_POST['valider'])) {
-  if (!empty($_POST['userName']) and !empty($_POST['mdp'])) {
-    $userName_par_defaut = "admin";
-    $mdp_par_defaut = "12345";
-    $userName_saisi = htmlspecialchars($_POST['userName']);
-    $mdp_saisi = htmlspecialchars($_POST['mdp']);
-    if ($userName_saisi == $userName_par_defaut and $mdp_saisi == $mdp_par_defaut) {
-      session_start();
-      $_SESSION['isAdminConnected'] = TRUE;
-      $_SESSION['adminConnectedName'] = $userName_saisi;
+// if (isset($_POST['valider'])) {
+//   if (!empty($_POST['userName']) and !empty($_POST['mdp'])) {
+//     $userName_par_defaut = "admin";
+//     $mdp_par_defaut = "12345";
+//     $userName_saisi = htmlspecialchars($_POST['userName']);
+//     $mdp_saisi = htmlspecialchars($_POST['mdp']);
+//     if ($userName_saisi == $userName_par_defaut and $mdp_saisi == $mdp_par_defaut) {
+//       session_start();
+//       $_SESSION['isAdminConnected'] = TRUE;
+//       $_SESSION['adminConnectedName'] = $userName_saisi;
 
-      header('Location: index.php');
-    } else {
-      echo "votre mot de passe ou userName incorrect";
-    }
-  } else {
-    echo "veuillez completez tous les champs";
-  }
-}
-?>
+//       header('Location: index.php');
+//     } else {
+//       echo "votre mot de passe ou userName incorrect";
+//     }
+//   } else {
+//     echo "veuillez completez tous les champs";
+//   }
+// }
+
+// Connexion à la base de données
+
+ ?>
 
 
 
@@ -68,12 +71,12 @@ if (isset($_POST['valider'])) {
                          <h2>Admin Login</h2>
                          <p>s'il vous plait entrer les details de votre login</p>
                      </div>
-                     <form method="post" action="">
+                     <form method="POST" action="login.php">
                      <div class="row">
-                         <input type="text" placeholder="Entrer Votre Username" class="form-control inpt-sm" name="userName" autocomplete="off">
+                         <input type="text" placeholder="Entrer Votre Username" class="form-control inpt-sm" name="username" autocomplete="off">
                      </div>
                      <div class="row">
-                         <input type="password" placeholder="Entrer Votre mot de passe" class="form-control inpt-sm"name="mdp" >
+                         <input type="password" placeholder="Entrer Votre mot de passe" class="form-control inpt-sm"name="password" >
                      </div>
                      <div class="row chk-lab">
         

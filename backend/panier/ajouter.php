@@ -20,8 +20,10 @@ include '../../configDB.php';
         //si ce produit n'existe pas
         die("Ce produit n'existe pas");
     }
+    $totalProduits= 1 ;
     //ajouter le produit dans le panier ( Le tableau)
-
+    $totalProduits = $totalProduits + count($_SESSION['panier']);
+    if ( $totalProduits <= 4) {
     if(isset($_SESSION['panier'][$id])){// si le produit est déjà dans le panier
         $_SESSION['panier'][$id]++; //Représente la quantité 
     }else {
@@ -32,5 +34,12 @@ include '../../configDB.php';
    //redirection vers la page index.php
    header("location:../../frontend/products.php");
 
-  }
+  }else {
+    // Afficher une alerte à l'utilisateur
+    $_SESSION['message']="Vous ne pouvez pas ajouter plus de 4 produits dans le panier.";
+    // Supprimer le produit ajouté du panier
+    unset($_SESSION['panier'][$id]);
+    header("location:../../frontend/products.php");
+}
+}
 ?>

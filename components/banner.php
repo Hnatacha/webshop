@@ -26,7 +26,7 @@ $loggedin = isset($_SESSION['loggedin']);
                         } ?>
 
                             <li>
-                                <a href="../admin/authentification.php" title="Espace admin">
+                                <a href="../admin/admin.php" title="Espace admin">
                                     <i style='font-size:16px' class='fas'>&#xf023;</i>
                                 </a>
                             </li>

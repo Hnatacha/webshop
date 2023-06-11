@@ -46,6 +46,7 @@ $saisons = affichageSaison("saison", $con);
   if (isset($_POST["authentification"])){
   $email = addslashes($_POST['email']);
   $password =$_POST['mot_de_passe'];
+  $id = $_POST['id'];
   setcookie('donnee', 'authentification', time ()+3600);
   }
 ?>
@@ -148,7 +149,10 @@ https://templatemo.com/tm-571-webshop
 
     <!-- jQuery -->
     <script src="../assets/js/jquery-2.1.0.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Inclure votre fichier JavaScript -->
+     <script src="chemin/vers/votre/fichier/webshop.js"></script>
     <!-- Bootstrap -->
     <script src="../assets/js/popper.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>

@@ -13,17 +13,21 @@ if (isset($_GET['del'])) {
 
 function searchProductsCount($con, $search)
 {
+    // Vérifier si la recherche commence par une consonne
+    $startsWithConsonant = preg_match('/^[^aeiou]/i', $search);
 
-    $sql = " SELECT COUNT(P.id) AS total FROM produit as  P 
-    LEFT JOIN categorie as C ON C.id = P.categorie_id
-    LEFT JOIN saison  as S ON S.id = P.saison_id
-    LEFT JOIN accessoire as A ON A.id = P.accessoire_id
-    WHERE P.libelle LIKE '%" . $search . "%'
+    $sql = "SELECT COUNT(P.id) AS total FROM produit AS P 
+    LEFT JOIN categorie AS C ON C.id = P.categorie_id
+    LEFT JOIN saison AS S ON S.id = P.saison_id
+    LEFT JOIN accessoire AS A ON A.id = P.accessoire_id
+    WHERE (P.libelle LIKE '%" . $search . "%'
       OR P.description LIKE '%" . $search . "%'
       OR C.nom LIKE '%" . $search . "%'
       OR S.nom LIKE '%" . $search . "%' 
-      OR A.nom LIKE '%" . $search . "%'
-      ORDER BY P.id DESC";
+      OR A.nom LIKE '%" . $search . "%')
+      " . ($startsWithConsonant ? "AND P.libelle LIKE '%" . $search . "%'" : "") . "
+    ORDER BY P.id DESC";
+    
 
     $query = mysqli_query($con, $sql);
     if (mysqli_num_rows($query) > 0) {
@@ -32,51 +36,24 @@ function searchProductsCount($con, $search)
         return array();
     }
 }
+
 function PaginateProducts($con, $search, $pageFirstResult, $perPage)
 {
-    if ($_GET) {
+    // Vérifier si la recherche commence par une consonne
+    $startsWithConsonant = preg_match('/^[^aeiou]/i', $search);
 
-        try {
-            // Now we check if the data was submitted, isset() function will check if the data exists.
-            if (!isset($_GET['commande']) || empty($_GET['commande'])) {
-                throw new Exception("Aucune commande trouvé");
-            }
-
-            $commadeId = $_GET['commande'];
-            $compteId = $_SESSION['id'];
-            if (!strlen($compteId)) {
-                throw new Exception("Vous n'est pas connecté");
-            }
-
-            $query = " SELECT LC.id AS lc_id, P.libelle, CT.nom nom_categorie, LC.quantity, LC.prix, P.url AS image 
-            FROM ligne_commande LC 
-            JOIN commande C ON LC.commande_id  = C.id 
-            JOIN produit P ON P.id  = LC.produit_id 
-            JOIN categorie CT ON CT.id  = P.categorie_id 
-            JOIN
-            WHERE C.id = " . $commadeId . "  AND C.compte_id = " . $compteId . " ; ";
-
-            $db = mysqli_query($con, $query);
-
-            if (mysqli_num_rows($db) > 0) {
-                return exit(json_encode(['success' => true, 'response' => mysqli_fetch_all($db, MYSQLI_ASSOC)]));
-            } else {
-                return exit(json_encode(['success' => true, 'response' => array()]));
-            }
-        } catch (Exception $ex) {
-            exit(json_encode(['success' => false, 'message' => $ex->getMessage()]));
-        }
-    }
-    $sql = " SELECT P. *, C.nom AS nom_categorie, S.nom AS nom_saison FROM produit as  P 
-    LEFT JOIN categorie as C ON C.id = P.categorie_id 
-    LEFT JOIN saison  as S ON S.id = P.saison_id
-    LEFT JOIN accessoire as A ON A.id = P.accessoire_id
-    WHERE P.libelle LIKE '%$search%'
+    $sql = "SELECT P.*, C.nom AS nom_categorie, S.nom AS nom_saison FROM produit AS P
+    LEFT JOIN categorie AS C ON C.id = P.categorie_id
+    LEFT JOIN saison AS S ON S.id = P.saison_id
+    LEFT JOIN accessoire AS A ON A.id = P.accessoire_id
+    WHERE (P.libelle LIKE '%$search%'
       OR P.description LIKE '%$search%'
       OR C.nom LIKE '%$search%'
-      OR S.nom LIKE '%$search%' 
-      OR A.nom LIKE '%$search%'
-      ORDER BY P.id DESC LIMIT $pageFirstResult, $perPage";
+      OR S.nom LIKE '%$search%'
+      OR A.nom LIKE '%$search%')
+      " . ($startsWithConsonant ? "AND P.libelle LIKE '$search%'" : "") . "
+      ORDER BY P.id DESC
+      LIMIT $pageFirstResult, $perPage";
 
     $query = mysqli_query($con, $sql);
     if (mysqli_num_rows($query) > 0) {
@@ -88,17 +65,21 @@ function PaginateProducts($con, $search, $pageFirstResult, $perPage)
 
 function searchPaginateProducts($con, $search, $pageFirstResult, $perPage)
 {
+    // Vérifier si la recherche commence par une consonne
+    $startsWithConsonant = preg_match('/^[^aeiou]/i', $search);
 
-    $sql = " SELECT P. *, C.nom AS nom_categorie, S.nom AS nom_saison FROM produit as  P 
-    LEFT JOIN categorie as C ON C.id = P.categorie_id 
-    LEFT JOIN saison  as S ON S.id = P.saison_id
-    LEFT JOIN accessoire as A ON A.id = P.accessoire_id
-    WHERE P.libelle LIKE '%$search%'
+    $sql = "SELECT P.*, C.nom AS nom_categorie, S.nom AS nom_saison FROM produit AS P
+    LEFT JOIN categorie AS C ON C.id = P.categorie_id
+    LEFT JOIN saison AS S ON S.id = P.saison_id
+    LEFT JOIN accessoire AS A ON A.id = P.accessoire_id
+    WHERE (P.libelle LIKE '%$search%'
       OR P.description LIKE '%$search%'
       OR C.nom LIKE '%$search%'
-      OR S.nom LIKE '%$search%' 
-      OR A.nom LIKE '%$search%'
-      ORDER BY P.id DESC LIMIT $pageFirstResult, $perPage";
+      OR S.nom LIKE '%$search%'
+      OR A.nom LIKE '%$search%')
+      " . ($startsWithConsonant ? "AND P.libelle LIKE '$search%'" : "") . "
+    ORDER BY P.id DESC
+    LIMIT $pageFirstResult, $perPage";
 
     $query = mysqli_query($con, $sql);
     if (mysqli_num_rows($query) > 0) {
@@ -108,18 +89,6 @@ function searchPaginateProducts($con, $search, $pageFirstResult, $perPage)
     }
 }
 
-
-
-function affichage($table, $con)
-{
-    $sql = "SELECT * FROM $table WHERE accessoire_id IS NULL ORDER BY id DESC";
-    $query = mysqli_query($con, $sql);
-    if (mysqli_num_rows($query) > 0) {
-        return mysqli_fetch_all($query, MYSQLI_ASSOC);
-    } else {
-        return array();
-    }
-}
 function affichageSaison($table, $con)
 {
     $sql = "SELECT * FROM $table  ORDER BY id DESC";

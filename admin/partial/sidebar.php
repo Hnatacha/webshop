@@ -8,6 +8,17 @@
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+            </svg> nobmre_vue</a>
+          <ul class="nav-group-items">
+            <li class="nav-item"><a class="nav-link" href="../nombre_de_vue/nombre_de_vue_admin.php"><span class="nav-icon"></span> admin</a></li>
+            <li class="nav-item"><a class="nav-link" href="../nombre_de_vue/nombre_de_vue_client.php"><span class="nav-icon"></span> client</a></li>
+            <li class="nav-item"><a class="nav-link" href="../nombre_de_vue/nombre_de_vue_reservation.php"><span class="nav-icon"></span> reservation</a></li>
+           
+          </ul>
+        </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="../vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
             </svg> Vetements</a>
           <ul class="nav-group-items">
             <li class="nav-item"><a class="nav-link" href="../produits/index.php"><span class="nav-icon"></span> Produits</a></li>

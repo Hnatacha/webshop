@@ -298,7 +298,91 @@ CREATE TABLE `produit` (
 
 LOCK TABLES `produit` WRITE;
 /*!40000 ALTER TABLE `produit` DISABLE KEYS */;
-INSERT INTO `produit` VALUES (1,'Produit 1',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/women-02.jpg',4,1,2,NULL,2,121.6,0),(2,'Produit 2',458,'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj','../assets/images/women-01.jpg',3,2,2,NULL,3,421,0),(3,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/women-03.jpg',4,3,2,NULL,3,139.84,0),(4,'Produit ',150,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/men-02.jpg',3,4,1,NULL,4,112.5,0),(5,'Produit ',455,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/men-01.jpg',4,5,2,NULL,1,409.5,0),(6,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/men-03.jpg',1,6,4,NULL,3,139.84,0),(7,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/pantalon.jpg',3,3,1,NULL,5,136.7,0),(8,'Produit ',117,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/RedPant.jpg',3,8,1,NULL,2,93.6,0),(9,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/kid-02.jpg',4,2,3,NULL,1,136.8,0),(10,'Produit ',155,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/kid-01.jpg',3,1,1,NULL,5,108.5,0),(11,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/kid-03.jpg',4,2,4,NULL,1,136.8,0),(12,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/pull03.jpg',9,4,1,NULL,3,139.84,0),(13,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/robe-zip.jpg',2,2,3,NULL,1,84.8,0),(14,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/robe-zip02.jpg',2,2,4,NULL,4,114,0),(15,'Produit ',225,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/PSgreen.jpg',5,1,1,NULL,5,157.5,0),(16,'Produit ',600,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/pantalon-short.jpg',3,3,4,NULL,3,552,0),(17,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/manteau-robe.jpg',2,2,4,NULL,2,121.6,0),(18,'Produit ',375,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/women-02.jpg',2,9,4,NULL,3,345,0),(19,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/pantalon-sport.jpg',3,3,3,NULL,2,114,0),(20,'Produit ',820,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/pantalon-vert-chemise.jpg',3,3,4,NULL,1,738,0),(21,'Produit ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/manteau-hiver.jpg',4,2,1,NULL,5,106.4,0),(22,'Produit ',100,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/manteau-vert-hiver.jpg',3,1,1,NULL,4,75,0),(23,'Produit ',425,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/women-03.jpg',3,10,3,NULL,5,297.5,0),(24,'Produit ',458,'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj','../assets/images/women-01.jpg',2,8,2,NULL,2,366.4,0),(25,'Produit',350,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/women-01.jpg',2,7,4,NULL,4,262.5,0),(26,'Accessoire 1',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-01.jpg',4,9,2,7,NULL,121.6,0),(27,'Accessoire 2',458,'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj','../assets/images/accessoir-02.jpg',3,6,2,9,NULL,421,0),(28,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-03.jpg',4,6,2,9,NULL,139.84,0),(29,'Accessoire ',150,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-04.jpg',3,9,1,9,NULL,112.5,0),(30,'Accessoire ',455,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-05.jpg',4,9,2,9,NULL,409.5,0),(31,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-06.jpg',1,9,2,9,NULL,139.84,0),(32,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-07.jpg',4,2,1,9,NULL,136.7,0),(33,'Accessoire ',117,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-08.jpg',2,3,1,6,NULL,93.6,0),(34,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-09.jpg',4,1,3,6,NULL,136.8,0),(35,'Accessoire ',155,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-10.jpg',3,8,1,7,NULL,108.5,0),(36,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-11.jpg',4,8,4,7,NULL,136.8,1520),(37,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-12.jpg',2,8,4,5,NULL,139.84,0),(38,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-13.jpg',1,5,3,7,NULL,84.8,0),(39,'Accessoire ',152,'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd','../assets/images/accessoir-14.jpg',3,8,4,5,NULL,114,0),(40,'Accessoire ',225,'un texte en faux latin, le Lorem ipsum ou Lipsum.','../assets/images/accessoir-15.jpg',5,1,1,7,NULL,157.5,30),(51,'Men\'s Terry Cloth Organic Cotton Robe',52,'tetdfsf dsfsfsfdsf sf ','../assets/images/20221019005140634f2dfcdfa98.jfif',3,2,4,NULL,NULL,50,12),(52,'Jean mom fit bleu-clair',22,'teer ffdfdffdfddddddddddddxc','../assets/images/20221019005417634f2e99306c8.jpg',3,5,4,NULL,NULL,18,52);
+INSERT INTO `produit` (`id`, `libelle`, `prix`, `description`, `url`, `rate`, `categorie_id`, `saison_id`, `accessoire_id`, `bonne_affaire_id`, `prix_reduction`, `quantite`) VALUES
+
+(1, 'Robe rouge', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/women-02.jpg', 4, 2, 2, NULL, 2, 121.6, 0),
+
+(2, 'Pantalon chemise', 458, 'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj', '../assets/images/women-01.jpg', 3, 3, 2, NULL, 3, 421, 0),
+
+(3, 'Chemise col rouler', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/women-03.jpg', 4, 9, 1, NULL, 3, 139.84, 0),
+
+(4, 'robe fleuri', 150, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/men-02.jpg', 3, 2, 2, NULL, 4, 112.5, 0),
+
+(5, 'Pull', 455, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/men-01.jpg', 4, 9, 1, NULL, 1, 409.5, 0),
+
+(6, 'salopette', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/men-03.jpg', 1, 7, 3, NULL, 3, 139.84, 0),
+
+(7, 'Pantalon', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/pantalon.jpg', 3, 3, 2, NULL, 5, 136.7, 0),
+
+(8, 'Culotte rouge', 117, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/RedPant.jpg', 3, 5, 4, NULL, 2, 93.6, 0),
+
+(9, 'chemise pantalon', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/kid-02.jpg', 4, 3, 2, NULL, 1, 136.8, 0),
+
+(10, 'Pull', 155, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/kid-01.jpg', 3, 9, 4, NULL, 5, 108.5, 0),
+
+(11, 'Produit ', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/kid-03.jpg', 4, 2, 4, NULL, 1, 136.8, 0),
+
+(12, 'Pull', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/pull03.jpg', 3, 9, 1, NULL, 3, 139.84, 0),
+
+(13, 'robe', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/robe-zip.jpg', 2, 2, 1, NULL, 1, 84.8, 0),
+
+(14, 'Robe pull', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/robe-zip02.jpg', 2, 2, 3, NULL, 4, 114, 0),
+
+(15, 'Culotte', 225, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/PSgreen.jpg', 5, 5, 4, NULL, 5, 157.5, 0),
+
+(16, 'short', 600, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/pantalon-short.jpg', 3, 5, 4, NULL, 3, 552, 0),
+
+(17, 'Manteau', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/manteau-robe.jpg', 2, 6, 1, NULL, 2, 121.6, 0),
+
+(18, 'Robe rouge', 375, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/women-02.jpg', 2, 3, 3, NULL, 3, 345, 0),
+
+(19, 'Pantalon', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/pantalon-sport.jpg', 3, 3, 3, NULL, 2, 114, 0),
+
+(20, 'Pantalon', 820, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/pantalon-vert-chemise.jpg', 3, 3, 2, NULL, 1, 738, 0),
+
+(21, 'Manteau', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/manteau-hiver.jpg', 4, 6, 1, NULL, 5, 106.4, 0),
+
+(22, 'Manteau', 100, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/manteau-vert-hiver.jpg', 3, 6, 1, NULL, 4, 75, 0),
+
+(23, 'chemise col rouler', 425, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/women-03.jpg', 3, 9, 3, NULL, 5, 297.5, 0),
+
+(24, 'pantalon chemise', 458, 'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj', '../assets/images/women-01.jpg', 2, 3, 2, NULL, 2, 366.4, 0),
+
+(25, 'pantalon chemise', 350, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/women-01.jpg', 2, 2, 4, NULL, 4, 262.5, 0),
+
+(26, 'botte', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-01.jpg', 4, 9, 1, 4, NULL, 121.6, 0),
+
+(27, 'Chapeau gris', 458, 'etyuiojhgfddfghjkkjhg fghjklkjhg bgyuikjn zdfghj', '../assets/images/accessoir-02.jpg', 3, 6, 1, 2, NULL, 421, 0),
+
+(28, 'casquette noir', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-03.jpg', 4, 6, 2, 9, NULL, 139.84, 0),
+
+(29, 'Chapeau noir', 150, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-04.jpg', 3, 9, 1, 2, NULL, 112.5, 0),
+
+(30, 'Casquette grise', 455, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-05.jpg', 4, 9, 3, 9, NULL, 409.5, 0),
+
+(31, 'Casquette Noire', 152, 'casquette', '../assets/images/accessoir-06.jpg', 1, 9, 4, 9, NULL, 139.84, 0),
+
+(32, 'Casquette rose', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-07.jpg', 4, 9, 3, 9, NULL, 136.7, 0),
+
+(33, 'Chaussure blanche', 117, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-08.jpg', 2, 3, 3, 1, NULL, 93.6, 0),
+
+(34, 'Chaussure noire', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-09.jpg', 4, 1, 1, 1, NULL, 136.8, 0),
+
+(35, 'Talon grise', 155, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-10.jpg', 3, 8, 4, 7, NULL, 108.5, 0),
+
+(36, 'Talon verte', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-11.jpg', 4, 8, 1, 7, NULL, 136.8, 1520),
+
+(37, 'Sandale', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-12.jpg', 2, 8, 4, 5, NULL, 139.84, 0),
+
+(38, 'talon ', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-13.jpg', 1, 5, 2, 7, NULL, 84.8, 0),
+
+(39, 'Sandale noir', 152, 'uzyfbfhbdfbh v dsibvdsv suvidbvusbdv svsduivbdsvusbduivbsdibviusd', '../assets/images/accessoir-14.jpg', 3, 8, 4, 5, NULL, 114, 0),
+
+(40, 'talon haute', 225, 'belle talon haute', '../assets/images/accessoir-15.jpg', 5, 1, 3, 7, NULL, 157.5, 30);
+
+
+
+
 /*!40000 ALTER TABLE `produit` ENABLE KEYS */;
 UNLOCK TABLES;
 
