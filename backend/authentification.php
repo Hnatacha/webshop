@@ -14,6 +14,17 @@ if (mysqli_connect_errno()) {
     // If there is an error with the connection, stop the script and display the error.
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+function getIp(){
+    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }else{
+      $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+  }
+  echo 'L adresse IP de l utilisateur est : '.getIp();
 
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if (!isset($_POST['email'], $_POST['mot_de_passe'])) {
@@ -44,7 +55,7 @@ if ($stmt = $con->prepare('SELECT id, mot_de_passe FROM compte WHERE email = ?')
             echo 'Welcome ' . $_SESSION['email'] . '!';
 
             // Retrieve user IP address
-            $userIP = $_SERVER['REMOTE_ADDR'];
+            $userIP = getIp();
 
             // Retrieve current date and time
             $dateTime = date('Y-m-d H:i:s');

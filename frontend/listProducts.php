@@ -22,7 +22,7 @@
                 <span class='prix'> <?= $produit['prix'] ?><sup>€</sup>
                 </span>
                 <span class='reservation'>
-                <span><a class="text-white" href='../backend/panier/ajouter.php?id=<?= $produit['id'] ?>' class="ajout panier">reservation</a></span>
+                <span><a class="text-white" href='../backend/panier/ajouter.php?id=<?= $produit['id'] ?>' class="ajout panier">reserver</a></span>
 
                  </span>
                  

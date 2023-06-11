@@ -133,8 +133,8 @@ https://templatemo.com/tm-571-webshop
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">nom_admin</th>
-                  <th scope="col">nombre_vue</th>
+                  <th scope="col">Nom de l'admin</th>
+                  <th scope="col">Nombre de vue</th>
                 </tr>
               </thead>
               <tbody>
@@ -151,7 +151,7 @@ https://templatemo.com/tm-571-webshop
                 }
                 ?>
                 <tr class="total">
-                  <th>nombre_total_vue : <?= $quantite_totale ?></th>
+                  <th>nombres totales de vues : <?= $quantite_totale ?></th>
                 </tr>
               </tbody>
             </table>
